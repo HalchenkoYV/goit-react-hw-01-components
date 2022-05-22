@@ -1,4 +1,5 @@
-import s from './FriendList.module.css'
+import s from './FriendList.module.css';
+import PropTypes from "prop-types";
 function FriendList({ friends }) {
   return (
       <section className={s.statistics}>
@@ -25,5 +26,12 @@ function getRandomHexColor(status) {
   }
   
 }
+
+FriendList.propTypes = {
+  id: PropTypes.string,
+  isOnline: PropTypes.bool,
+  avatar: PropTypes.string,
+  name: PropTypes.string,
+};
 
 export default FriendList
